@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend store</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- estilos y performance -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html">
+            <img class="header__imagen" src="img/logo.png" alt="logo principal">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>AngularJS</h1>
+
+        <div class="camisa">
+            <img class="camisa__imagen" src="./img/2.jpg" alt="imagen camisa">
+
+            <div class="camisa__descripcion">
+                <p class="camisa__descripcion__texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                </p>
+
+                <form class="formulario">
+                    <select class="formulario__opcion">
+                        <option disabled selected>Talla</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                        <option>Extra grande</option>
+                    </select>
+                    <input class="formulario__opcion" placeholder="Cantidad" type="number" min="1" max="5">
+                    <input class="formulario__boton" type="submit" value="Agregar al carrito">
+                </form>
+            </div> <!-- .camisa__descripcion -->
+        </div>
+    </main>
+
+<footer class="footer">
+    <p class="footer__parrafo">Front-end store - Todos los derechos reservados 2024</p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+/* Variables y Paleta de colores */
+
+:root {
+    --color-primario:#7d00df;
+    --color-primario-oscuro: #7003c5;
+    --color-secundario: #ffec00;
+    --color-secundario-oscuro: #daca05;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuente: "IBM Plex Sans", sans-serif;
+}
+
+/* Globales */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: var(--fuente);
+    background-color: var(--color-primario);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+}
+
+p{
+    color: var(--blanco);
+}
+
+img{
+    border-radius: 1rem;
+}
+
+.contenedor{    
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__imagen{
+    margin: 2rem 0;
+}
+
+/* navegacion */
+
+.navegacion{
+    background-color: var(--color-primario-oscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navegacion__enlace{
+    text-decoration: none;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo{
+    color: var(--color-secundario);
+}
+
+/* contenedor productos */
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media(min-width: 768px){
+    .contenedor-productos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* producto */
+
+.producto{
+    background-color: var(--color-primario-oscuro);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.producto__imagen{
+    width: 100%;
+}
+
+.producto__precio{
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+.producto__nombre,
+.producto__precio{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* Imagenes promocionales */
+
+.imagen-promocional{
+    min-height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 .8rem;
+    border-radius: .8rem;
+}
+
+.imagen--camisas{
+    background-image: url("../img/grafico1.jpg");
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.imagen--node{
+    background-image: url("../img/grafico2.jpg");
+    grid-row: 7 / 8;
+    grid-column: 1 / 3;
+}
+
+@media(min-width: 768px){
+    .imagen--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/* footer */
+
+.footer{
+    background-color: var(--color-primario-oscuro);
+    padding: .5rem 0;
+}
+
+.footer__parrafo{
+    text-align: center;
+}
+
+/******************* NOSOTROS *************************/
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+}
+
+@media(min-width: 768px){
+    .principal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+.principal__texto{
+    text-align: center;
+    line-height: 2.8rem;
+    font-size: 2rem;
+}
+
+.principal__imagen{
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.porque-nosotros{
+    margin-top: 3rem;
+}
+
+.contenedor-iconos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media(min-width: 768px){
+    .contenedor-iconos{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.bloque__icono{
+    width: 100%;
+}
+
+.bloque__texto{
+    margin-top: 0;
+}
+
+/************************** PRODUCTO ****************************/
+
+.camisa{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+@media(min-width:768px){
+    .camisa{
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+}
+
+.camisa__imagen{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(min-width:768px){
+    .camisa__imagen{
+        width: 100%;
+    }
+}
+
+.camisa__descripcion__texto{
+    text-align: center;
+    line-height: 2.2rem;
+    padding: 1rem;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.formulario__opcion,
+.formulario__boton{
+    width: 100%;
+}
+
+.formulario__opcion{
+    text-align: center;
+    padding: .5rem;
+}
+
+.formulario__boton{
+    background-color: var(--color-secundario);
+    border: none;
+    padding: 1.5rem 1rem;
+    grid-column: 1 / 3;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color .4s ease;
+}
+
+.formulario__boton:hover{
+    cursor: pointer;
+    background-color: var(--color-secundario-oscuro);
+}
